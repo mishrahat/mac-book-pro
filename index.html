@@ -30,20 +30,27 @@
 
                         <!-- Memory Buttons  -->
                         <p class="fw-bolder mt-4">Memory</p>
-                        <button type="button" class="btn btn-outline-secondary">8GB unified memory</button>
-                        <button type="button" class="btn btn-outline-secondary">16GB unified memory</button>
+                        <button id="8-gb-btn" type="button" class="btn btn-outline-secondary">8GB unified
+                            memory</button>
+                        <button id="16-gb-btn" type="button" class="btn btn-outline-secondary">16GB unified
+                            memory</button>
 
                         <!-- Storage Buttons  -->
                         <p class="fw-bolder mt-4">Storage</p>
-                        <button type="button" class="btn btn-outline-secondary">256GB SSD Storage</button>
-                        <button type="button" class="btn btn-outline-secondary">512GB SSD Storage</button>
-                        <button type="button" class="btn btn-outline-secondary">1TB SSD Storage</button>
+                        <button id="256gb-ssd-btn" type="button" class="btn btn-outline-secondary">256GB SSD
+                            Storage</button>
+                        <button id="512gb-ssd-btn" type="button" class="btn btn-outline-secondary">512GB SSD
+                            Storage</button>
+                        <button id="1tb-ssd-btn" type="button" class="btn btn-outline-secondary">1TB SSD
+                            Storage</button>
 
                         <!-- Delivery Buttons -->
                         <p class="fw-bolder mt-4">Choose your delivery option</p>
-                        <button type="button" class="btn btn-outline-secondary">Friday, Aug 25 FREE Prime
+                        <button type="button" id="free-delivery-btn" class="btn btn-outline-secondary">Friday, Aug 25
+                            FREE Prime
                             Delivery</button>
-                        <button type="button" class="btn btn-outline-secondary">Friday, Aug 21 Delivery Charge
+                        <button id="delivery-charge-btn" type="button" class="btn btn-outline-secondary">Friday, Aug 21
+                            Delivery Charge
                             $20</button>
 
                         <!-- price added  -->
@@ -57,37 +64,42 @@
                                 <tr>
                                     <th scope="row"></th>
                                     <td class="fw-bolder">Extra Memory Cost</td>
-                                    <td class="fw-bolder">$0</td>
+                                    <td class="fw-bolder">$<span id="extra-memory-cost">0</span></td>
                                 </tr>
                                 <tr>
                                     <th scope="row"></th>
                                     <td class="fw-bolder">Extra Storage Cost</td>
-                                    <td class="fw-bolder">$0</td>
+                                    <td class="fw-bolder">$<span id="extra-storage-cost">0</span></td>
                                 </tr>
                                 <tr>
                                     <th scope="row"></th>
                                     <td class="fw-bolder">Delivery Charge</td>
-                                    <td class="fw-bolder">$0</td>
+                                    <td class="fw-bolder">$<span id="delivery-cost">0</span></td>
                                 </tr>
                             </tbody>
                             <tbody>
                                 <tr>
                                     <th scope="row"></th>
                                     <td class="fw-bolder">Total Price</td>
-                                    <td class="fw-bolder">$1299</td>
+                                    <td class="fw-bolder">$<span id="total-price">1299</span></td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <!-- coupon input  -->
                         <p class="mt-4 fw-bold">Add Promo Code</p>
-                        <input style="border: 1px solid grey" type="text">
-                        <button class="btn btn-danger">Apply</button>
+                        <input id="coupon-input" style="border: 1px solid grey" type="text">
+                        <button onclick="couponClick()" id="apply-btn" class="btn btn-danger">Apply</button>
                     </div>
                 </div>
             </div>
         </section>
         <hr>
-        <h2 class="text-center">Total: $1299</h2>
+        <h2 class="text-center">Total: $<span id="final-total-price">1299</span></h2>
     </main>
+
+    <!-- script link  -->
+    <script src="js/macbook.js"></script>
 </body>
 
 </html>
